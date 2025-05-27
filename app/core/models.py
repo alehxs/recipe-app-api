@@ -1,3 +1,11 @@
-from django.db import models # noqa
+"""
+Database Models
+"""
+from django.db import models
+from django.contrib.auth.models import (
+  AbstractBaseUser,
+  BaseUserManager,
+  PermissionsMixin
+)
 
-# Create your models here.
+class User(AbstractBaseUser, PermissionsMixin):
